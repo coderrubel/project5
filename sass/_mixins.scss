@@ -1,0 +1,167 @@
+// font
+@mixin heading_font($weight) {
+  font-weight: $weight;
+  font-family: "Barlow", sans-serif;
+}
+@mixin body_font($weight) {
+  font-weight: $weight;
+  font-family: "Barlow", sans-serif;
+}
+
+@mixin bg_property() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin gradient_bg($direction) {
+  @if $direction==left {
+    background: -webkit-linear-gradient(
+      right,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+  } @else if $direction==right {
+    background: -webkit-linear-gradient(
+      left,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+  } @else if $direction==top {
+    background: -webkit-linear-gradient(
+      bottom,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+  } @else {
+    background: -webkit-linear-gradient(
+      top,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -o-linear-gradient(
+      $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: -moz-linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+    background: linear-gradient(
+      to $direction,
+      #026060 0%,
+      #00b1aa 50%,
+      #026060 100%
+    );
+  }
+}
+@mixin gradient_bg_2($direction) {
+  @if $direction==left {
+    background: -webkit-linear-gradient(right, $dark 0%, $brand_dark 100%);
+    background: -o-linear-gradient($direction, $dark 0%, $brand_dark 100%);
+    background: -moz-linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+    background: linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+  } @else if $direction==right {
+    background: -webkit-linear-gradient(left, $dark 0%, $brand_dark 100%);
+    background: -o-linear-gradient($direction, $dark 0%, $brand_dark 100%);
+    background: -moz-linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+    background: linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+  } @else if $direction==top {
+    background: -webkit-linear-gradient(bottom, $dark 0%, $brand_dark 100%);
+    background: -o-linear-gradient($direction, $dark 0%, $brand_dark 100%);
+    background: -moz-linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+    background: linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+  } @else {
+    background: -webkit-linear-gradient(top, $dark 0%, $brand_dark 100%);
+    background: -o-linear-gradient($direction, $dark 0%, $brand_dark 100%);
+    background: -moz-linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+    background: linear-gradient(to $direction, $dark 0%, $brand_dark 100%);
+  }
+}
+@mixin placeholdercolor($color, $coloropacity) {
+  &::placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+  &:-moz-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    opacity: $coloropacity;
+    color: $color;
+  }
+}

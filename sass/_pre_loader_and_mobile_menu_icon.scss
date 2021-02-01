@@ -1,0 +1,41 @@
+// hamburger
+.mega_nav .navbar-toggler {
+  border: none;
+  position: relative;
+  &:focus,
+  &:hover {
+    background-color: transparent;
+  }
+
+  .icon-bar {
+    transition: all 0.25s;
+    height: 3px;
+    width: 100%;
+    background: $brand;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &:nth-child(2) {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+    &:nth-child(3) {
+      opacity: 0;
+      top: 6px;
+    }
+    &:nth-child(4) {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+      top: 12px;
+    }
+  }
+
+  &.collapsed .icon-bar:nth-child(2),
+  &.collapsed .icon-bar:nth-child(4) {
+    transform: rotate(0);
+  }
+  &.collapsed .icon-bar:nth-child(3) {
+    opacity: 1;
+  }
+}

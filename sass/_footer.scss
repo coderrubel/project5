@@ -1,0 +1,135 @@
+// Footer
+.simple_clean {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  margin-top: 90px;
+  background: $dark;
+  z-index: 1;
+  .footer_top {
+    padding: 20px 0;
+    .footer_logo {
+      font-size: 34px;
+      color: #fff;
+      display: inline-block;
+    }
+    .footer_menu {
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 5px;
+        a {
+          display: inline-block;
+          color: #fff;
+          font-size: 16px;
+          min-width: 70px;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          padding: 10px 14px;
+          left: 0;
+          &::after {
+            position: absolute;
+            z-index: -2;
+            bottom: 0;
+            left: calc(50% - 5px);
+            width: 10px;
+            height: 3px;
+            content: "";
+            transition: all 0.3s ease-in-out;
+            transform-origin: center;
+            background: $brand;
+            border-radius: 5px;
+          }
+          &:hover:after {
+            border-color: #fff;
+            width: 100%;
+            left: 0;
+          }
+          &:hover {
+            color: $brand;
+          }
+        }
+      }
+    }
+  }
+  .footer_bottom {
+    position: relative;
+    .copy_right_text {
+      p {
+        font-size: 16px;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+}
+
+svg {
+  width: 100%;
+  overflow: visible;
+  position: absolute;
+  bottom: 30px;
+}
+
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count: infinite;
+  fill: $dark;
+}
+.wave_2 {
+  animation: wave 3s linear;
+  animation-iteration-count: infinite;
+
+  fill: url("#header-shape-gradient") #fff;
+}
+
+#header-shape-gradient {
+  --color-stop: #026060;
+  --color-mid: #00b1aa;
+  --color-bot: #026060;
+}
+
+#wave2 {
+  animation-duration: 7s;
+  animation-direction: reverse;
+  opacity: 1;
+}
+#wave3 {
+  animation-duration: 5s;
+  opacity: 1;
+}
+
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+}
+@media #{$tab_device} {
+  .simple_clean {
+    svg {
+      bottom: 120px;
+    }
+  }
+}
+@media #{$small_mobile} {
+  .simple_clean {
+    svg {
+      bottom: 220px;
+    }
+  }
+}
+@media #{$large_mobile} {
+  .simple_clean {
+    svg {
+      bottom: 160px;
+    }
+  }
+}

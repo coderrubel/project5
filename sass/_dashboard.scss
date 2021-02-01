@@ -1,0 +1,889 @@
+// Dashboard area
+.account_area {
+  padding: 150px 0 50px;
+  .dash_nav {
+    .dash_heading {
+      text-align: center;
+      position: relative;
+      background: url("../img/dnav-heading-bg.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 45px;
+      h5 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        position: relative;
+        z-index: 1;
+        padding-top: 5px;
+      }
+    }
+    ul {
+      border-radius: 5px;
+      border: 2px solid $brand_dark;
+      background: $brand_darker;
+      text-align: center;
+      margin-bottom: 20px;
+      li {
+        transition: all 0.3s ease-in-out;
+        margin: 5px auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+        a {
+          color: #fff;
+          margin: 10px;
+          height: 30px;
+          padding: 0 15px;
+          background: #fff;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+          left: 0px;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          text-shadow: 0px 2px 1.96px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.5);
+          clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+          .font_icon {
+            color: $brand_darker;
+            transition: all 0.3s ease-in-out;
+          }
+          span {
+            margin-right: 10px;
+          }
+          &:after {
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+            left: -5px;
+            transition: all 0.3s ease-in-out;
+            content: "";
+            background: $brand;
+          }
+          &:hover {
+            left: 5px;
+            color: #fff;
+            .font_icon {
+              color: $brand;
+            }
+            &:after {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.account_details_area {
+  background: #fff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 22.08px 1.92px rgba(0, 0, 0, 0.3);
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+  .user_info_inner {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $brand_darker;
+    border: 2px solid $brand;
+    border-radius: 5px;
+    flex-direction: column;
+    &.user_info_inner_2 {
+      margin-right: 15px;
+      .single_info {
+        display: block;
+        text-align: center;
+        p {
+          color: #fff;
+          border: none;
+          background: none;
+          span {
+            display: block;
+            background: $brand;
+            margin-top: 10px;
+            border-radius: 15px;
+            padding: 20px;
+            clip-path: none;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  .single_info {
+    padding: 10px;
+    width: 100%;
+    p {
+      background: $brand;
+      border-radius: 5px;
+      color: #fff;
+      span {
+        background: $brand_dark;
+        padding: 10px;
+        padding-right: 20px;
+        clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+        border-radius: 5px 0 0 5px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.dwallet_wrap {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid $brand;
+  background: $brand_darker;
+}
+.dwallet {
+  width: 32%;
+  margin: 10px 0;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 2px solid #fff;
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+  }
+}
+
+// account area
+.summary_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .single_summary {
+    flex: 1 0 0;
+    margin: 5px;
+    padding: 20px 0;
+    background: url("../img/shape-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    p {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      line-height: 1.5;
+      font-size: 14px;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//  for withdraw funds
+.dwallet_wrap_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.single_dwallet_2 {
+  background: $brand_dark;
+  width: 100%;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 12px;
+  .toggle-wrap {
+    margin: 0;
+    margin-right: 15px;
+  }
+  img {
+    margin: 5px 10px;
+  }
+  h5 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    span {
+      margin-left: 15px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .sdw_2_top {
+    padding: 5px 10px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .sdw_2_bottom {
+    padding: 10px 0;
+  }
+  p {
+    box-shadow: 0px 0px 5.82px 0.18px rgba(0, 0, 0, 0.4);
+    color: $text;
+    background: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 20px;
+    span {
+      font-size: 16px;
+      margin-left: 5px;
+    }
+
+    &.pending_b span {
+      color: $text_pink;
+    }
+    &.abailable_b span {
+      color: $green;
+    }
+  }
+}
+
+.single_plan .p_service_list ul li {
+  width: 100%;
+}
+
+.single_plan.single_plan_2 .toggle-wrap {
+  margin-top: 15px;
+}
+
+.single_plan.single_plan_2 {
+  background: $brand_darker;
+  &:after {
+    display: none;
+  }
+}
+.single_plan.single_plan_2 h5 {
+  margin-bottom: 15px;
+}
+
+.ac_status_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ac_status {
+  margin: 15px;
+  width: 45%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  background: $brand_darker;
+  border: 2px solid $brand;
+  p {
+    color: #fff !important;
+    text-shadow: 0px 2px 1.96px rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+    span {
+      padding: 5px 10px;
+      font-weight: 700;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.upline_2 {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: $brand_darker;
+  border: 2px solid $brand;
+  text-align: center;
+  p {
+    color: #fff !important;
+    text-shadow: 0px 2px 1.96px rgba(0, 0, 0, 0.6);
+    font-size: 22px;
+  }
+}
+
+//Security page
+.sequrity_area {
+  padding: 0 20px;
+  .security_box {
+    text-align: center;
+    margin: 10px auto;
+    h5 {
+      background: $brand_dark;
+      color: #fff;
+      padding: 10px;
+      font-size: 18px;
+    }
+    .checkbox_wrap {
+      display: flex;
+      justify-content: center;
+      background: $text;
+      .toggle-wrap {
+        margin: 10px;
+      }
+      .toggle-label {
+        color: #fff;
+      }
+    }
+  }
+  .custom_list {
+    margin-left: 20px;
+    color: $dark;
+    list-style: symbols;
+    li {
+      margin-bottom: 20px;
+    }
+    img {
+      margin: 10px;
+    }
+  }
+
+  .custom-control.custom-switch {
+    color: $text;
+  }
+  .two_fact_input {
+    border: none;
+    width: 90%;
+    box-shadow: 0 0 10px 0 #0000005e;
+    border-radius: 5px;
+    margin: 20px auto 0;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    &:focus {
+      border: 1px solid $brand;
+    }
+  }
+}
+
+.history_area {
+  color: #fff;
+  .history_table {
+    border: 2px solid $text;
+    padding: 15px 10px;
+    background: $brand_dark;
+    margin: 20px auto;
+    border-radius: 20px;
+    .tr_1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .td_1 .select_wrap {
+        padding: 2px;
+        background: $brand_darker;
+        margin: 10px;
+        border-radius: 0px;
+      }
+      .td_1 select {
+        background: transparent;
+        color: #fff;
+        border: none;
+      }
+      .td_2 .select_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 2px 6px;
+        background: $text;
+        margin: 10px;
+        border-radius: 0px;
+        p {
+          margin-right: 5px;
+        }
+        .select_wrap_inner {
+          border-radius: 0px;
+          background: #fff;
+        }
+      }
+      .td_2 select {
+        background: transparent;
+        color: #000;
+        border: none;
+      }
+    }
+    .boxed_btn {
+      text-transform: uppercase;
+      margin: 0;
+      margin-left: 5px;
+      background: $text;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      padding: 10px 20px 10px;
+      &:hover {
+        background: $brand;
+        color: $text;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.account_area .table {
+  color: #fff;
+  background: $text;
+}
+.account_area .table thead th {
+  vertical-align: bottom;
+  border-top: 4px solid $brand;
+  border-bottom: none;
+}
+.account_area .table td img {
+  width: 24px;
+  margin-left: 10px;
+}
+.account_area .table td,
+.account_area .table th {
+  padding: 12px;
+  vertical-align: middle;
+  border: 1px solid $brand;
+  border-radius: 0px;
+  img {
+    border-radius: 15px;
+  }
+}
+.account_area .table thead {
+  background: $brand;
+}
+.td_border_left {
+  position: relative;
+  z-index: 1;
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 3px;
+    width: 4px;
+    height: calc(100% - 6px);
+    background: $brand;
+    content: "";
+  }
+}
+.account_area .pagination {
+  display: inline-flex;
+  background: $brand;
+  padding: 5px 10px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 7px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.account_area .page-item {
+  display: inline-block;
+
+  .page-link {
+    padding: 6px;
+    line-height: 1.25;
+    color: $brand;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 3px;
+    border: none;
+    text-shadow: 0px 2px 1.96px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #fff;
+      background: $text;
+    }
+  }
+  &:last-child(),
+  &:first-child() {
+    .page-link {
+      background-color: transparent;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #fff;
+        background: $text;
+      }
+    }
+  }
+}
+
+// Referral_area
+.dreferral_wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.single_referral {
+  min-width: 240px;
+  background: $brand_darker;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 3px 5px 1px #000000a3;
+  .contents {
+    padding: 10px;
+    .content_inner {
+      border-radius: 10px;
+      border: 1px solid $brand;
+      padding: 20px 10px;
+      p {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        span {
+          font-size: 24px;
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+      img {
+        margin-bottom: 25px;
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+// withdraw_area
+.dwithdraw_area {
+  padding: 0 20px;
+}
+
+.dw_box {
+  border-radius: 10px;
+  margin: 15px 0;
+  background: $text;
+  padding: 20px 30px;
+  .input-group {
+    background: #f3f3f3;
+    border-radius: 15px;
+    .input-group-text {
+      border: none;
+      border-radius: 10px 0 0 10px;
+      background: $brand;
+      color: #fff;
+    }
+    input {
+      border: 2px solid $brand;
+      border-radius: 0 10px 10px 0;
+      text-align: right;
+      color: #000;
+      background: transparent;
+      @include placeholdercolor(#000, 1);
+    }
+  }
+  textarea {
+    border: 2px solid $brand;
+    border-radius: 12px;
+    background: #f3f3f3;
+    width: 100%;
+  }
+}
+// custom toggle
+.toggle-wrap {
+  cursor: pointer;
+  display: block;
+}
+.toggle-switch {
+  display: inline-block;
+  background: #fff;
+  border-radius: 20px;
+  width: 42px;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: "";
+  }
+  &:before {
+    display: block;
+    background: $text;
+    border-radius: 10px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: $brand_darker;
+  }
+  .toggle-checkbox:checked + & {
+    background: $green;
+    &:before {
+      left: 20px;
+    }
+  }
+}
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle-label {
+  color: $text;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+// Make Deposit
+.single_plan.single_plan_2 {
+  background: $brand_darker;
+  margin: 0px auto 30px;
+  padding: 20px 0 20px;
+  border-radius: 10px;
+
+  .p_service_list ul li {
+    width: 90%;
+  }
+  .toggle-wrap {
+    margin-top: 20px;
+  }
+}
+.deposit_box {
+  background: $text;
+  padding: 20px 30px;
+  border-radius: 10px;
+  .input-group {
+    border-radius: 15px;
+    margin: 10px 0;
+    width: 100%;
+    background: $brand;
+    .input-group-text {
+      border: none;
+      background: $brand;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 10px 0 0 10px;
+    }
+    input {
+      border: 2px solid $brand;
+      text-align: right;
+      color: #000;
+      font-weight: 700;
+      background: #f3f3f3;
+      border-radius: 0 10px 10px 0;
+      @include placeholdercolor(#000, 1);
+    }
+  }
+  .dwallet_box_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // flex-direction: column;
+    .dwallet_box {
+      background: $brand;
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 10px;
+      h4 {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: $text;
+        text-transform: uppercase;
+      }
+      ul {
+        text-align: center;
+        li {
+          background: rgba(#000, 0.5);
+          min-width: 160px;
+          border-radius: 10px;
+          display: inline-flex;
+          align-items: center;
+          margin: 5px;
+          padding: 5px;
+          .toggle-wrap {
+            margin-bottom: 0;
+            margin-right: 5px;
+          }
+          h6 {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+  .td_2_3_wrap {
+    flex-direction: column;
+  }
+  .td_1 {
+    flex-direction: column;
+  }
+  .account_area .dash_nav ul li a {
+    font-size: 14px;
+  }
+}
+// For Tab device
+@media #{$tab_device} {
+  .history_area {
+    .history_table {
+      .tr_1 {
+        .td_2_3_wrap {
+          flex-direction: column;
+        }
+        .td_1 {
+          flex-direction: column;
+        }
+        .td_4 {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .single_dwallet_2 {
+    flex-direction: column;
+    h5 {
+      font-size: 16px;
+    }
+    .sdw_2_top {
+      padding-left: 5px;
+    }
+  }
+
+  .summary_wrap .single_summary {
+    p {
+      padding: 5px;
+    }
+  }
+  .account_area .dash_nav ul li {
+    display: inline-block;
+    a {
+      font-size: 14px;
+      padding: 3px 8px;
+      margin: 5px;
+    }
+  }
+
+  .account_area .user_info.table td,
+  .account_area .user_info.table th {
+    padding: 10px 10px;
+  }
+  .upline_2 {
+    padding: 15px 15px;
+  }
+
+  .ac_status p span {
+    margin-left: 0px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+}
+@media #{$small_mobile} {
+  .account_area {
+    padding: 80px 0 40px;
+  }
+  .account_area .dash_nav ul li {
+    display: inline-block;
+    a {
+      font-size: 14px;
+      margin: 5px;
+      padding: 3px 8px;
+    }
+  }
+
+  .ac_status {
+    width: 95%;
+    p span {
+      display: inline-block;
+      margin-top: 0px;
+    }
+  }
+
+  .single_plan.single_plan_2 .price {
+    position: absolute;
+  }
+  .user_info {
+    flex-wrap: wrap;
+    .single_info {
+      &.single_info_2 {
+        height: auto;
+      }
+    }
+  }
+
+  .user_info .user_info_inner.user_info_inner_2 {
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .summary_wrap {
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    .single_summary {
+      flex: 1 0 auto;
+      padding: 10px 40px;
+    }
+  }
+  .dwallet {
+    width: 100%;
+  }
+
+  .single_dwallet_2 {
+    flex-direction: column;
+    h5 {
+      font-size: 16px;
+    }
+    .sdw_2_top {
+      padding-left: 5px;
+    }
+  }
+  .history_area {
+    .history_table {
+      .tr_1 {
+        .td_1 {
+          width: 100%;
+          .select_wrap {
+            padding: 5px;
+          }
+        }
+        .td_2_3_wrap {
+          width: 100%;
+          flex-direction: column;
+        }
+        .td_4 {
+          margin: 0 auto;
+        }
+        select {
+          padding: 5px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .account_area .input-group-text {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+@media #{$large_mobile} {
+}

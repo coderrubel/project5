@@ -1,0 +1,233 @@
+// login_area, support_area, account_info area
+
+.login_area,
+.support_area,
+.account_info_area {
+  position: relative;
+  z-index: 1;
+  padding: 150px 0 50px;
+  .d_form {
+    overflow: hidden;
+    background: #fff;
+    padding: 70px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 12.09px 0.91px rgba(0, 0, 0, 0.22);
+  }
+  .login_wrap {
+    text-align: left;
+    margin: 0 auto;
+  }
+  .login_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .login-img-2,
+    .login-img-3 {
+      animation: updown 3.5s ease-in-out infinite;
+    }
+    .login-img,
+    .login-img-3 {
+      mix-blend-mode: luminosity;
+    }
+    .login-img-2 {
+      opacity: 0.5;
+      mix-blend-mode: hard-light;
+    }
+  }
+  .heading_5 {
+    font-size: 28px;
+    margin: 45px auto;
+    color: $brand;
+    position: relative;
+    z-index: 1;
+    &:before {
+      position: absolute;
+      z-index: -1;
+      width: 200px;
+      height: 6px;
+      content: "";
+      background: $brand;
+      right: calc(100% + 8px);
+      top: calc(50% - 3px);
+    }
+  }
+  .input-group-prepend {
+    width: 40%;
+    .input-group-text {
+      border-radius: 0 !important;
+      border: none;
+      padding-left: 20px;
+      width: 100%;
+      background: #fff;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+      &:after {
+        position: absolute;
+        z-index: -1;
+        left: -5px;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: $brand;
+        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+      }
+    }
+  }
+
+  .input-group {
+    border-radius: 0;
+    background: $brand_darker;
+  }
+  .form-control {
+    background: transparent;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: none;
+    color: #fff;
+    @include placeholdercolor(#fff, 1);
+  }
+  textarea {
+    border-radius: 50px;
+    box-shadow: none;
+    border: none;
+    resize: none;
+    &:focus {
+      border: none;
+    }
+  }
+
+  .gradient_btn {
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    @include gradient_bg(bottom);
+    &:after {
+      border-radius: 25px;
+      @include gradient_bg_2(top);
+    }
+    &:hover {
+      color: #fff;
+    }
+    &.alt {
+      @include gradient_bg_2(bottom);
+      &:after {
+        @include gradient_bg(top);
+      }
+    }
+  }
+
+  p {
+    color: $dark;
+    font-size: 16px;
+  }
+
+  .tc_btn {
+    transition: all 0.3s ease-in-out;
+    color: $brand;
+    font-size: 16px;
+    &:hover {
+      color: $dark;
+    }
+  }
+  .upline {
+    background: $brand_darker;
+    border-radius: 35px;
+    h4 {
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+  .custom-control {
+    display: inline-block;
+    padding: 7px 0;
+    color: $dark;
+    a {
+      color: $brand_darker;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $dark;
+      }
+    }
+    label {
+      background: none;
+      top: 0;
+    }
+  }
+}
+.custom-control-label::before {
+  background: $brand;
+}
+.custom-control-label::after {
+  background: $brand;
+}
+.custom-control-input:checked ~ .custom-control-label:before {
+  background: $text !important;
+}
+
+@media #{$medium_device} {
+}
+@media #{$tab_device_below} {
+  .account_info_area .lorgin_wrap h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+@media #{$small_mobile} {
+  .login_area,
+  .support_area,
+  .account_info_area {
+    padding: 150px 0 30px;
+    .d_form {
+      padding: 40px 20px;
+    }
+    .login_wrap {
+      margin-top: 20px;
+    }
+
+    .upline {
+      h4 {
+        padding: 7px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .input-group {
+      height: 50px;
+      width: 100%;
+      margin: 5px 0;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      font-size: 16px;
+    }
+    textarea {
+      padding: 10px;
+      min-height: 110px;
+    }
+    .input-group .form-control {
+      width: 50%;
+    }
+    .custom_style {
+      margin-left: 25px;
+    }
+    .input-group-prepend {
+      .input-group-text {
+        font-size: 16px;
+      }
+    }
+    a {
+      font-size: 16px;
+    }
+  }
+}
+@media #{$large_mobile} {
+}

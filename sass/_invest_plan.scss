@@ -1,0 +1,133 @@
+// invest paln
+.investment_plan {
+  position: relative;
+  z-index: 1;
+}
+
+.single_plan {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 15px 10px;
+  transition: all 0.3s ease-in-out;
+  &:after {
+    position: absolute;
+    z-index: -1;
+    left: 7%;
+    top: 0%;
+    width: 100%;
+    height: 108%;
+    content: "";
+    background: url("../img/plan-bg.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  h5 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 60px;
+  }
+  .price {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .p_service_list {
+    position: relative;
+    z-index: 1;
+    ul {
+      position: relative;
+      margin-left: 30px;
+      li {
+        height: 30px;
+        padding: 0px;
+        justify-content: start;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        &::after {
+          position: absolute;
+          left: -7px;
+          top: 10px;
+          width: 11px;
+          height: 10px;
+          content: "";
+          background: #fff;
+          z-index: -1;
+          clip-path: polygon(100% 50%, 0 0, 0 100%);
+        }
+        p {
+          margin-right: 5px;
+          color: $brand;
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  .boxed_btn {
+    margin: 15px auto 15px;
+    width: 130px;
+    height: 35px;
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+  .single_plan {
+    h5 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .price {
+      font-size: 28px;
+    }
+    .p_service_list {
+      ul {
+        li {
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .boxed_btn {
+      margin: 10px auto 15px;
+      height: 30px;
+    }
+  }
+}
+@media #{$tab_device} {
+  .single_plan {
+    margin-bottom: 40px;
+    .p_service_list {
+      ul {
+        margin-left: 70px;
+      }
+    }
+  }
+}
+@media #{$small_mobile} {
+  .single_plan {
+    margin-bottom: 40px;
+    background: $brand_darker;
+    border-radius: 15px;
+    h5 {
+      margin-bottom: 15px;
+    }
+    &:after {
+      display: none;
+    }
+    .p_service_list {
+      ul {
+        margin-left: 70px;
+      }
+    }
+  }
+}
+@media #{$large_mobile} {
+}

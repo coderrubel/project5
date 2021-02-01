@@ -1,0 +1,103 @@
+.referral_area {
+  .container {
+    padding: 25px 20px;
+  }
+  p {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    color: $text;
+  }
+  .referral_wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after {
+      position: absolute;
+      z-index: -1;
+      height: 140%;
+      width: 100%;
+      content: "";
+      left: 0;
+      top: -20%;
+      background: url("../img/referral-bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .single_item {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    h5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: #fff;
+      height: 120px;
+      width: 105px;
+    }
+  }
+}
+
+// Responsive
+@media #{$medium_device} {
+  .referral_area .referral_wrap::after {
+    height: 130%;
+    width: 100%;
+    left: 0;
+    top: -15%;
+  }
+  .referral_area .single_item {
+    margin-left: 30px;
+    h5 {
+      height: 86px;
+      width: 86px;
+    }
+  }
+}
+// For Tab device
+@media #{$tab_device} {
+  .referral_area .referral_wrap::after {
+    height: 130%;
+    width: 100%;
+    left: 0;
+    top: -15%;
+  }
+  .referral_area .single_item {
+    margin-left: 30px;
+    h5 {
+      height: 70px;
+      width: 46px;
+      font-size: 28px;
+    }
+  }
+}
+@media #{$small_mobile} {
+  .referral_area .referral_wrap {
+    margin-top: 30px;
+    &:after {
+      height: 130%;
+      width: 100%;
+      left: 0;
+      top: -15%;
+    }
+  }
+  .referral_area .single_item {
+    margin-left: 30px;
+    h5 {
+      height: 70px;
+      width: 66px;
+      font-size: 28px;
+    }
+  }
+}
+@media #{$large_mobile} {
+}

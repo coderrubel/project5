@@ -1,0 +1,105 @@
+// Hero_area
+.hero_area {
+  position: relative;
+  z-index: 1;
+  padding: 105px 0 100px;
+  background: url("../img/hero-bg.png");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &:after {
+    width: 100%;
+    height: 120px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: url("../img/dots.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  .hero_content {
+    padding-right: 100px;
+    h6 {
+      color: #fff;
+      text-shadow: 0 0 3px #000;
+    }
+    h1 {
+      color: $brand;
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 3px #000;
+    }
+    h3 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 3px #000;
+    }
+    p {
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      text-shadow: 0 0 3px #000;
+    }
+    .gradient_btn {
+      margin-right: 10px;
+      border-radius: 20px;
+      padding: 7px 20px 10px;
+      text-transform: uppercase;
+      @include gradient_bg(bottom);
+      &:after {
+        border-radius: 25px;
+        @include gradient_bg_2(top);
+      }
+      &:hover {
+        color: #fff;
+      }
+      &.alt {
+        @include gradient_bg_2(bottom);
+        &:after {
+          @include gradient_bg(top);
+        }
+      }
+    }
+  }
+  .hero_img {
+    text-align: center;
+    img {
+      position: relative;
+      animation: updown 5s ease-in-out infinite;
+    }
+  }
+}
+
+// For Medium device
+@media #{$medium_device} {
+}
+
+// For Tab device
+@media #{$tab_device} {
+  .hero_area .hero_content {
+    padding-right: 0;
+  }
+}
+
+// For Mobile
+@media #{$small_mobile} {
+  .hero_area {
+    padding: 80px 0 30px;
+    .hero_content {
+      h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .hero_area .hero_img {
+    margin-top: 30px;
+  }
+}
+
+@media #{$large_mobile} {
+}

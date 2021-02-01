@@ -1,0 +1,24 @@
+.payment_method {
+  padding: 20px 0;
+  .single_payment {
+    margin: 10px 5px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    .payment_img {
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+    }
+  }
+}
+// Responsive
+@media #{$medium_device} {
+}
+// For Tab device
+@media #{$tab_device} {
+}
+@media #{$small_mobile} {
+}
+@media #{$large_mobile} {
+}
